@@ -7,17 +7,17 @@
 <script src="js/jquery-1.9.1.min.js"></script>
 <body>
     <input type="text" id="testMobile" name="testMobile">
-    <input type="button" onclick="display_alert()" value="Ğ£ÑéÊÖ»úºÅ" />
+    <input type="button" onclick="display_alert()" value="æ ¡éªŒæ‰‹æœºå·"/>
 </body>
 <script type="text/javascript">
     function display_alert()
     {
         var tm = $("#testMobile").val();
-        alert("ÊÖ»úºÅÎª£º"+tm)
+        alert("æ‰‹æœºå·ä¸ºï¼š"+tm);
         //var exg=/^17[5-8]\d{8}$|^170\d{8}$|^13[0-9]\d{8}$|^15[0-3,5-9]\d{8}$|^18[0-3,5-9]\d{8}$|^147\d{8}$/;
         var exg=/^(13[0-9]|14[5679]|15[0-3,5-9]|16[567]|17[01345678]|18[0-9]|19[189])[0-9]{8}$/;
         if(!exg.test(tm)){
-            alert( "ÊÖ»úºÅÂë²»ÕıÈ·£¡");
+            alert("æ‰‹æœºå·ç ä¸æ­£ç¡®!");
             return;
         }
 
