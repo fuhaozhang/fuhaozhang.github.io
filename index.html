@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>夏日花</title>
+    <!--<link rel="stylesheet" href="styles/demo.css" />-->
+</head>
+<body>
+    <div id="app">
+        <my-component v-bind:my-name="name" v-bind:my-age="age"></my-component>
+    </div>
+    <template id="myComponent">
+        <table>
+            <tr>
+                <th colspan="2">
+                    子组件数据
+                </th>
+            </tr>
+            <tr>
+                <td>my name</td>
+                <td>{{ myName }}</td>
+            </tr>
+            <tr>
+                <td>my age</td>
+                <td>{{ myAge }}</td>
+            </tr>
+        </table>
+    </template>
+
+    <div id="app2">
+        <p>{{message}}</p>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'www.xiarihua.com',
+            age: 28
+        },
+        components: {
+            'my-component': {
+                template: '#myComponent',
+                props: ['myName','myAge']
+            }
+        }
+    })
+
+    new Vue({
+        el:'#app2',
+        data:{
+            message:'夏日花'
+        }
+    })
+</script>
+</html>
